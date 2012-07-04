@@ -26,7 +26,7 @@ var Cron = (function () {
 		timerRunning: false,
 
 		// Start timer
-		timerStart: function () {
+		startTimer: function () {
 			var self = this,
 				output = false;
 
@@ -45,7 +45,7 @@ var Cron = (function () {
 		},
 
 		// Stop timer
-		timerStop: function () {
+		stopTimer: function () {
 			var self = this,
 				output = false;
 
