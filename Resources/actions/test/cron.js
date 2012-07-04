@@ -12,5 +12,3 @@ setTimeout(function () {
 setTimeout(function () {
 	alert( Cron.today );
 }, 15000);
-
-win.open();
