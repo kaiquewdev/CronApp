@@ -59,7 +59,7 @@ var Cron = (function () {
 			return output;
 		},
 
-		new: core,
+		inherit: core,
 	};
 
 	return new core;
