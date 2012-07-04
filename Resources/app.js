@@ -29,7 +29,7 @@ holderTimer.add( timerPanel );
 var controlPanel = Ti.UI.createView({
 	top: '45%',
 	width: '100%',
-	height: '50%',
+	height: '60%',
 });
 win.add( controlPanel );
 
@@ -42,7 +42,7 @@ controlPanel.add( startTimerButton );
 
 var stopTimerButton = Ti.UI.createButton({
 	title: 'Stop Timer',
-	top: '22%',
+	top: '25%',
 	width: 150,
 });
 controlPanel.add( stopTimerButton );
@@ -62,6 +62,10 @@ win.addEventListener('focus', function () {
 
 startTimerButton.addEventListener('click', function () {
 	if ( updatePanel === false ) {
+		if ( stopPanel ) {
+			timerPanel.setText( Cron.today.toString('HH:mm:ss') );
+		}
+
 		Cron.startTimer();
 		stopPanel = false;
 
